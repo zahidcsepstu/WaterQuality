@@ -1,0 +1,291 @@
+:root{
+    --primary-color:#ef473a;
+    --secondary-color:#444;
+    --transition-second:.3s;
+}
+
+a{
+    transition: color var(--transition-second);
+}
+
+
+body{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:#fafafa;
+}
+
+
+section{
+    display:flex;
+    min-height:100vh;
+    width:100%;
+}
+
+section aside{
+    position:relative;
+    background: center / cover url(../image/clean-21479_1920.jpg) no-repeat;
+    flex:2;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    color:#444;
+    
+}
+
+section aside .content{
+    z-index:2;
+    position: relative;
+    width:90%;
+    transform: translateX(60px);
+}
+section aside .content h1{
+    font-size:2.5rem;
+    font-weight:400;
+    text-transform: uppercase;
+    padding:0.4rem 1.3rem 0.4rem 2rem;
+    background:#fafafa;
+    margin-bottom:2rem;
+}
+section aside .content p{
+    /* background:#fc4a1a; */
+    background:var(--primary-color);
+    padding:1.5rem;
+    color:#fafafa;
+    margin-bottom:0;
+    font-size:1.4rem;
+
+}
+
+
+section aside:before{
+    content:'';
+    position: absolute;
+    top:0; left:0;
+    height:100%;
+    width:100%;
+    /* background: linear-gradient(to right, #360033, #0b8793); */
+    background-image:linear-gradient(to bottom, #1a2a6c, #b21f1f, #fdbb2d);
+    z-index:0;
+    opacity:0.6;
+}
+
+
+
+section main{
+    flex:3;
+    padding:1rem 2rem;
+}
+
+
+main .nav-link{
+    font-size:1.4rem;
+    color: var(--primary-color)
+}
+
+main .nav-link.active{
+    color: var(--secondary-color)
+}
+
+main .nav-link:hover{
+    color:var(--secondary-color)
+}
+main .places , main .result-parent{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: calc( 100vh - 49px - 1rem );
+    flex-direction: column;
+}
+
+main .places .places-portion{
+    display:flex;
+    width: 80%;
+
+}
+.places-portion a{
+    flex:1;
+    display:flex;
+    background:#eaeaea;
+    justify-content: center;
+    align-items:center;
+    padding:4rem 2rem;
+    margin-bottom:1.6rem;
+    margin-left:1.6rem;
+    font-size:1.3rem;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size:cover;
+    
+    position:relative;
+    color:#fafafa;
+    text-align:center;
+}
+.places-portion a span{
+    position: relative;
+    z-index: 1;
+    font-size:1.8rem;
+}
+
+.places-portion a:before{
+    content:'';
+    position: absolute;
+    top:0; left:0;
+    height:100%;
+    width:100%;
+    background: linear-gradient(to right, #360033, #0b8793);
+    z-index:0;
+    opacity:0.6;
+}
+
+
+
+
+.properties{
+    width:160px;
+    height:160px;
+    background:#eaeaea;
+    margin-left:2rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    
+    /* border-radius:50%; */
+    
+}
+
+
+.result-parent > div {
+    display:flex;
+}
+.properties > * {
+    margin:0;
+}
+.properties h4{
+    font-weight:300;
+    margin-bottom:0.3rem;
+
+}
+.properties h1{
+    font-size:1.8rem;
+}
+
+.properties i{
+    font-size:1.4rem;
+    margin-bottom:0.4rem;
+}
+.ideal-table{
+    width:90%;
+}
+
+.ideal-table table{
+    vertical-align:middle;
+}
+
+.footer-result ul{
+    list-style:none;
+    margin:0 0 1rem;
+    padding:0;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: flex-end;
+}
+
+.footer-result ul li{
+    margin:0 0.5rem 0.5rem;
+}
+
+
+.properties p{
+    margin-top:0.7rem;
+    color:rgb(32, 112, 32)
+}
+
+.properties.bg-danger p{
+    color:rgb(110, 212, 110)
+}
+
+.properties p i{
+    font-size:0.9rem;
+}
+
+@media only screen and (max-width:768px){
+    .footer-result ul{
+        justify-content: center;
+    }
+}
+
+
+
+
+/* Responsive CSS*/
+@media only screen and (max-width:991px){
+    section{
+        flex-direction:column;
+    }
+    section aside .content{
+        transform:translateX(0)
+    }
+    section aside .content h1{
+        margin-top:1rem;
+        font-size:1.8rem;
+        text-align:center;
+    }
+    section aside .content p{
+        display:none;
+    }
+    ul.nav{
+        justify-content: center!important;
+        background:#eaeaea;
+    }
+    main .nav-link{
+        font-size: 1.3rem;
+        padding: 0.5rem 1rem;
+        text-transform: uppercase;
+        font-weight:400;
+
+    }
+    main .places, main .result-parent{
+        min-height:auto;
+        align-items:center;
+    }
+    .places .display-4{
+        font-size:2rem;
+        margin:2rem 0;
+    }
+    .places-portion{
+        flex-direction:row;
+        flex-wrap:wrap;
+    }
+    .places-portion a{
+        padding:2rem;
+        margin:0 0.5rem 1rem;
+        
+    }
+    .result-parent{
+        margin-top:2rem;
+    }
+    .title-result .display-4{
+        font-size:2rem;
+        margin-bottom:2rem;
+    }
+    .property-result{
+        display:flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+        justify-content: center;
+       
+    }
+    .property-result > div{
+        margin: 0 0.5rem 1rem;
+    }
+
+}
+

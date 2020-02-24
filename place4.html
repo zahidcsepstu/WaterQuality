@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Water Quality Check | Place 4</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section>
+        <aside>
+            <div class="content">
+                <h1>IoT Based Water Quality Measurment System</h1>
+                <p class="lead">
+                    Water quality refers to the chemical, physical, biological, and radiological characteristics of water. It is a measure of the condition of water relative to the requirements of one or more biotic species and or to any human need or purpose.
+                </p>
+            </div>
+        </aside>
+        <main>
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link " href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ideal-values.html">Ideal Values</a>
+                </li>
+            </ul>
+
+            <div class="result-parent">
+                <div class="title-result mb-3">
+                    <h3 class="display-4">Place 4 </h3>
+                </div>
+                <div class="property-result">
+                    <div class="properties">
+                        <i class="fas fa-temperature-low text-primary"></i>
+                        <h4>Temp:</h4>
+                        <h1 id="tempinC">...</h1>
+                        <p> <i class="fas fa-check-circle"></i> 10-40 °C</p>
+                        
+                    </div>
+                    <div class="properties">
+                        <i class="fas fa-temperature-high text-danger"></i>
+                        <h4>Temp:</h4>
+                        <h1 id="tempinF">...</h1>
+                        <p> <i class="fas fa-check-circle"></i> 50-104 °F</p>
+                        
+                    </div>
+                    <div class="properties">
+                        <i class="fas fa-thermometer text-success"></i>
+                        <h4>Turbidity:</h4>
+                        <h1 id="turbidity">...</h1>
+                        <p> <i class="fas fa-check-circle"></i> 0-5 NTU</p>
+                        
+                    </div>
+                    <div class="properties">
+                        <i class="fas fa-tint text-info"></i>
+                        <h4>pH Value:</h4>
+                        <h1 id="phVal">...</h1>
+                        <p> <i class="fas fa-check-circle"></i> 6.5 - 8 Units</p>
+                    </div>
+                   
+                    
+                </div>
+                <div class="footer-result mt-3 flex-column">
+                    <h3 class="font-weight-light text-info text-center text-lg-right">Result:</h3>
+                    <p id="waterAcidity" class="text-primary text-center text-md-right lead">-</p>
+                    <ul>
+                        <li id="drinkingResult"> - </li>
+                        <li id="aquaticResult"> - </li>
+                        <li id="agricultureResult"> - </li>
+                    </ul>
+                    <h3 class="text-center m-0 font-weight-light" >Time of the record: <span id="time">-:-:-</span> </h3>
+
+                </div>
+            </div>
+
+
+        </main>
+   </section>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
+
+<script src="js/firebase-config.js" ></script>
+<script src="js/app.js"></script>
+</body>
+</html>
